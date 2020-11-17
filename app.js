@@ -3,7 +3,6 @@ if (process.env.NODE_ENV !== "production") {
 }
 const express = require("express");
 const bodyParser = require("body-parser");
-const fetch = require("node-fetch");
 
 const { dbConnect } = require("./db/init");
 const User = require("./db/user_schema");

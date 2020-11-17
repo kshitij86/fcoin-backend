@@ -1,3 +1,6 @@
+const fetch = require("node-fetch");
+const User = require("../db/user_schema");
+
 const FCOIN_PR = 10;
 
 const fetchActivity = async (user_name, project) => {
