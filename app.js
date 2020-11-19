@@ -34,7 +34,7 @@ app.post("/create", async (req, res, next) => {
   res.send(data);
 });
 
-app.get("/stats", async (req, res, next) => {
+app.post("/stats", async (req, res, next) => {
   let user_name = req.body.user_name;
   let project = req.body.project;
   const existingUser = await User.findOne({ user_name: user_name });
@@ -46,7 +46,7 @@ app.get("/stats", async (req, res, next) => {
   res.send(existingUser);
 });
 
-app.get("/activity", async (req, res, next) => {
+app.post("/activity", async (req, res, next) => {
   let data = {
     message: "fcoin",
   };
