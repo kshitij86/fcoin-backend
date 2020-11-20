@@ -13,7 +13,7 @@ const fetchActivity = async (user_name, project) => {
     if (item.repository_url.includes(project)) {
       pullReqArray.push({
         pr_title: item.title,
-        pr_url: item.url,
+        pr_url: item.html_url,
         created_at: item.created_at,
         updated_at: item.updated_at,
       });
