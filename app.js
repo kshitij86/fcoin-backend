@@ -84,7 +84,7 @@ app.get("/ranks", async (req, res, next) => {
     return b.fcoins - a.fcoins;
   });
   allUsers.map((user) => {
-    rankArray.push(user.user_name);
+    rankArray.push({ user_name: user.user_name, pr_count: user.pull_requests });
   });
 
   res.send(rankArray);
